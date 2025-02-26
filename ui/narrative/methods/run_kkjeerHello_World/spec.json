@@ -12,6 +12,17 @@
     "parameters": [ 
         {
             "id": "parameter_1",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ ]
+            }
+        },
+        {
+            "id": "parameter_2",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
@@ -37,6 +48,9 @@
                 },{
                     "input_parameter": "parameter_1",
                     "target_property": "parameter_1"
+                },{
+                    "input_parameter": "parameter_2",
+                    "target_property": "parameter_2"
                 }
             ],
             "output_mapping": [
