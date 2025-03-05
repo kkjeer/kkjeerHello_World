@@ -53,7 +53,7 @@ class kkjeerHello_World:
         # ctx is the context object
         # return variables are: output
         #BEGIN run_kkjeerHello_World
-        parallel_runner = KBParallel(self.callback_url)
+        # parallel_runner = KBParallel(self.callback_url)
         # tasks = [
         #   {
         #     'module_name': 'kb_Bowtie2',
@@ -78,7 +78,7 @@ class kkjeerHello_World:
         output = {
             'report_name': report_info['name'],
             'report_ref': report_info['ref'],
-            'custom_message': 'created parallel runner'
+            'custom_message': 'everything is commented out'
         }
         #END run_kkjeerHello_World
 
