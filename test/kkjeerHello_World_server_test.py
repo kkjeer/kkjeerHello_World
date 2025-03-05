@@ -64,5 +64,5 @@ class kkjeerHello_WorldTest(unittest.TestCase):
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
         ret = self.serviceImpl.run_kkjeerHello_World(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+                                                             'parameter_1': 'Hello World!', 'parameter_2': 'Second param'})
         print ("report_name", ret[0]['report_name'])
