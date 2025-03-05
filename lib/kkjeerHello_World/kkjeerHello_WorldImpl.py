@@ -4,7 +4,6 @@ import logging
 import os
 
 from installed_clients.KBaseReportClient import KBaseReport
-# from KBParallel.KBParallelClient import KBParallel
 from installed_clients.KBParallelClient import KBParallel
 #END_HEADER
 
@@ -53,7 +52,7 @@ class kkjeerHello_World:
         # ctx is the context object
         # return variables are: output
         #BEGIN run_kkjeerHello_World
-        # parallel_runner = KBParallel(self.callback_url)
+        parallel_runner = KBParallel(self.callback_url)
         # tasks = [
         #   {
         #     'module_name': 'kb_Bowtie2',
@@ -72,13 +71,18 @@ class kkjeerHello_World:
         # result = parallel_runner.run_batch(batch_run_params)
 
         report = KBaseReport(self.callback_url)
-        report_info = report.create({'report': {'objects_created':[],
-                                                'text_message': params['parameter_1']},
-                                                'workspace_name': params['workspace_name']})
+        report_info = report.create(
+          {
+            'report': {
+              'objects_created':[{'prop1': 'created parallel runner'}],
+              'text_message': f'Param 1: {params["parameter_1"]}, Param 2: {params["parameter_2"]}'
+            },
+            'workspace_name': params['workspace_name']
+          }
+        )
         output = {
             'report_name': report_info['name'],
             'report_ref': report_info['ref'],
-            'custom_message': 'everything is commented out'
         }
         #END run_kkjeerHello_World
 
