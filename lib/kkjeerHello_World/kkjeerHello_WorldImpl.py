@@ -54,22 +54,22 @@ class kkjeerHello_World:
         # return variables are: output
         #BEGIN run_kkjeerHello_World
         parallel_runner = KBParallel(self.callback_url)
-        tasks = [
-          {
-            'module_name': 'kb_Bowtie2',
-            'function_name': 'align_reads_to_assembly_app',
-            'version': 'dev',
-            'parameters': {}
-          }
-        ]
-        batch_run_params = {
-          'tasks': tasks,
-          'runner': 'parallel',
-          'concurrent_local_tasks': 1,
-          'concurrent_njsw_tasks': 2,
-          'max_retries': 2
-        }
-        result = parallel_runner.run_batch(batch_run_params)
+        # tasks = [
+        #   {
+        #     'module_name': 'kb_Bowtie2',
+        #     'function_name': 'align_reads_to_assembly_app',
+        #     'version': 'dev',
+        #     'parameters': {}
+        #   }
+        # ]
+        # batch_run_params = {
+        #   'tasks': tasks,
+        #   'runner': 'parallel',
+        #   'concurrent_local_tasks': 1,
+        #   'concurrent_njsw_tasks': 2,
+        #   'max_retries': 2
+        # }
+        # result = parallel_runner.run_batch(batch_run_params)
 
         report = KBaseReport(self.callback_url)
         report_info = report.create({'report': {'objects_created':[],
@@ -78,6 +78,7 @@ class kkjeerHello_World:
         output = {
             'report_name': report_info['name'],
             'report_ref': report_info['ref'],
+            'custom_message': 'created parallel runner'
         }
         #END run_kkjeerHello_World
 
