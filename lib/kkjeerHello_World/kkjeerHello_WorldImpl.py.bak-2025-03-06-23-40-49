@@ -26,7 +26,7 @@ class kkjeerHello_World:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kkjeer/kkjeerHello_World"
-    GIT_COMMIT_HASH = "a51a9aca0901776f33518a5be54853bf68168da9"
+    GIT_COMMIT_HASH = "81692bb373db8308b0b9bb12465948eaa48d82c2"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
