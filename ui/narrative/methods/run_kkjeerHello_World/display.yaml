@@ -4,7 +4,7 @@
 name: Testing KBParallel
 
 tooltip: |
-  Perform some (updated) kind of method
+  Tests running other apps from within this app using KBParallel
 
 screenshots: []
 
@@ -35,7 +35,7 @@ parameters:
     short-hint: |
       The second parameter
     long-hint: |
-      This is the second parameter.
+      This is the second parameter. It is currently unused and optional.
 
 description: |
   <p>Description goes here.</p>
