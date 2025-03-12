@@ -8,7 +8,6 @@ from installed_clients.KBaseReportClient import KBaseReport
 from installed_clients.KBParallelClient import KBParallel
 
 from biokbase.narrative.appeditor import generate_app_cell
-nms = biokbase.narrative.clients.get('narrative_method_store')
 #END_HEADER
 
 
@@ -29,7 +28,7 @@ class kkjeerHello_World:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kkjeer/kkjeerHello_World"
-    GIT_COMMIT_HASH = "681aae9fe61a7c0fca576d7f7eae9d1888411f63"
+    GIT_COMMIT_HASH = "a51a9aca0901776f33518a5be54853bf68168da9"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -57,10 +56,6 @@ class kkjeerHello_World:
         # return variables are: output
         #BEGIN run_kkjeerHello_World
         print('Starting Hello_World run function')
-
-        a_spec = nms.get_method_spec({'ids': ['kb_ea_utils/fastq_stats'], 'tag': 'release'})[0]
-        print(f'Got a_spec: {a_spec}')
-
         parallel_runner = KBParallel(self.callback_url)
         tasks = [
           {
