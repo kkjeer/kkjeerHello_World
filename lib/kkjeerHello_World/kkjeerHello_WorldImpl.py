@@ -59,7 +59,7 @@ class kkjeerHello_World:
         print('Starting Hello_World run function')
 
         ws = biokbase.narrative.clients.get('workspace')
-        obj = ws.get_objects2({'objects' : [{'ref' : '30170/2/1'}]})
+        obj = ws.get_objects2({'objects' : [{'ref' : '79/16/1'}]})
         print(f'Got obj: {obj}')
 
         a_spec = nms.get_method_spec({'ids': ['kb_ea_utils/fastq_stats'], 'tag': 'release'})[0]
